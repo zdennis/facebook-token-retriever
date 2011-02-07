@@ -1,0 +1,17 @@
+{
+  "name": "Facebook Token Retriever",
+  "version": "0.0.1",
+  "description": "When you're on the http://developers.facebook.com/docs/reference/api page this will automatically find your access token.",  
+  "icons": { "48": "icon-48.png" },
+  "permissions": ["tabs", "http://*/*"],
+  "browser_action": { 
+    "default_icon": "icon-48.png",
+    "popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://developers.facebook.com/docs/reference/api"],
+      "js": ["jquery-1.5.min.js", "fb.js"]
+    }
+  ]
+}
